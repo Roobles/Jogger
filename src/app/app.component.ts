@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RunningEntry } from './dto/running-entry';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Jogger';
+
+  targetTimeEntry: RunningEntry;
+
+  onInputCalculated(runningEntry: RunningEntry) {
+    this.targetTimeEntry = runningEntry;
+  }
 }

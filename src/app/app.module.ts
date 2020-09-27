@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { EntryInputDistanceTimeComponent } from './entry-input-distance-time/entry-input-distance-time.component';
 import { EntryInputComponent } from './entry-input/entry-input.component';
+import { EntryDisplayComponent } from './entry-display/entry-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryInputComponent,
-    EntryInputDistanceTimeComponent 
+    EntryInputDistanceTimeComponent,
+    EntryDisplayComponent 
   ],
   imports: [
     BrowserModule,

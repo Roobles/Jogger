@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { RunningEntry } from '../dto/running-entry';
 
 @Component({
@@ -11,6 +11,8 @@ export class EntryInputDistanceTimeComponent implements OnInit {
   duration: string; 
   avgTimePerMile: string;
   calculatedEntry: RunningEntry;
+
+  @Output() entryCalculated = new EventEmitter();
 
   constructor() { }
 
@@ -27,7 +29,7 @@ export class EntryInputDistanceTimeComponent implements OnInit {
       distanceFeet: this.convertToDistance(durationSeconds, avgTimeSeconds)
     };
 
-    window.alert(this.calculatedEntry.distanceFeet);
+    this.entryCalculated.emit(this.calculatedEntry);
   }
 
   timeEntryToSeconds(timeEntry: string) {

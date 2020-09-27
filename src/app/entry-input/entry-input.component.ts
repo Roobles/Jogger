@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { RunningEntry } from '../dto/running-entry';
 
 @Component({
   selector: 'app-entry-input',
@@ -9,7 +10,13 @@ export class EntryInputComponent implements OnInit {
 
   constructor() { }
 
+  @Output() inputCalculated = new EventEmitter();
+
   ngOnInit() {
+  }
+
+  onEntryCalculated(timeEntry:RunningEntry) {
+    this.inputCalculated.emit(timeEntry);
   }
 
 }
