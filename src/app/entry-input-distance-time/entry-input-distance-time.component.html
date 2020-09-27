@@ -1,0 +1,17 @@
+<div>
+  <label>
+    <span>Duration:</span>
+    <input [(ngModel)]="duration" />
+  </label>
+</div>
+<div>
+  <label>
+    <span>Average Time Per Mile:</span>
+    <input [(ngModel)]="avgTimePerMile" />
+  </label>
+</div>
+
+<button (click)="calculateInput()">Calculate</button>
+
+<div>{{duration}}</div>
+<div>{{avgTimePerMile}}</div>
