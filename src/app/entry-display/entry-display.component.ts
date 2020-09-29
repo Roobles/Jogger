@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RunningEntry } from '../dto/running-entry';
+import { RunningCalculation } from '../dto/running-calculation';
 
 @Component({
   selector: 'app-entry-display',
@@ -8,7 +8,7 @@ import { RunningEntry } from '../dto/running-entry';
 })
 export class EntryDisplayComponent implements OnInit {
 
-  @Input() timeEntry: RunningEntry;
+  @Input() timeCalculation: RunningCalculation;
 
   constructor() { }
 

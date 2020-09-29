@@ -1,6 +1,11 @@
 
-<div *ngIf="timeEntry">
+<div *ngIf="timeCalculation">
   <h2>Running Calculations</h2>
-  <div><span>Total Time in Seconds: </span>{{timeEntry.durationSeconds}}</div>
-  <div><span>Total Distance in Feet: </span>{{timeEntry.distanceFeet}}</div>
+  <div><span>Total Miles: </span>{{timeCalculation.TotalMiles}}</div>
+  <div><span>Miles Per Hour: </span>{{timeCalculation.MilesPerHour}}</div>
+  <div><span>Time Per Mile: </span>{{timeCalculation.TimePerMile}}</div>
+  <div><span>5K Time : </span>{{timeCalculation.TimePerFiveK}}</div>
+  <div><span>10K Time : </span>{{timeCalculation.TimePerTenK}}</div>
+  <div><span>Half Marathon: </span>{{timeCalculation.TimePerHalfMarathon}}</div>
+  <div><span>Marathon: </span>{{timeCalculation.TimePerMarathon}}</div>
 </div>
